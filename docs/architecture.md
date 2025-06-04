@@ -306,7 +306,7 @@ Training
     class WorkflowNode {
         -ID string
         -Type NodeType
-        -Config map[string]interface{}
+        -Config Map<String, Any>
     }
 
     class NodeType {
@@ -362,7 +362,7 @@ Training
         +ActionType AuditActionType
         +ResourceType string
         +ResourceID string
-        +Details map[string]interface{}
+        +Details Map<String, Any>
         +Timestamp time.Time
         +IPAddress string
     }
@@ -636,3 +636,28 @@ xai-workbench/
 ├── README.md
 └── README-zh.md
 ```
+
+## 参考
+1. **低代码/无代码 AI 平台**
+
+   * [Kubeflow Pipelines](https://github.com/kubeflow/pipelines)：用于编排机器学习工作流的低代码平台，支持可视化 DAG 编辑与调度。
+   * [MLflow](https://github.com/mlflow/mlflow)：虽然不是低代码 UI，但提供了模型管理与实验跟踪功能，适合快速迭代。
+   * [Rasa X](https://github.com/RasaHQ/rasa-x)：用于对话式 AI 的低代码管理与训练平台，可用于智能客服模块借鉴。
+
+2. **知识库与检索增强（RAG）**
+
+   * [Haystack](https://github.com/deepset-ai/haystack)：实现 RAG 智能问答，低门槛构建知识库增强流程。
+   * [Jina](https://github.com/jina-ai/jina)：基于向量检索的多模态搜索与生成，可用于文档与多媒体检索场景。
+   * [Qdrant](https://github.com/qdrant/qdrant)：向量数据库，支持近似最近邻检索，可提高检索性能。
+
+3. **模型编排与推理平台**
+
+   * [Triton Inference Server](https://github.com/triton-inference-server/server)：NVIDIA 提供的多模型、多框架推理平台，支持动态批处理与 GPU 加速。
+   * [TensorFlow Serving](https://github.com/tensorflow/serving)：用于部署 TensorFlow 模型的高性能推理服务，可作为微调模型的推理后端。
+   * [Ray Serve](https://github.com/ray-project/ray)：基于 Ray 的分布式推理平台，支持弹性伸缩与多模型管理。
+
+4. **前端可视化与工作流引擎**
+
+   * [Node-RED](https://github.com/node-red/node-red)：使用可视化编排方式将各类 API、模型与数据流连在一起，适合快速搭建原型。
+   * [Retex](https://github.com/retaxmind/Retex)：可视化工作流编辑器，可生成可执行任务代码。
+   * [JointJS + Rappid](https://github.com/clientIO/joint)：提供图形化 UML 或流程图编辑功能，可定制低代码拖拽界面。
