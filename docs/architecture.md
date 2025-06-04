@@ -85,7 +85,8 @@ graph TD
         PS_DataMgmt[数据管理与安全沙箱（Data Management & Secure Sandbox）]
         PS_Knowledge[知识库接入与增强（Knowledge Base Ingestion & RAG）]
         PS_Monitoring[监控与审计（Monitoring & Auditing）]
-        PS_Auth[认证与授权（Authentication & Authorization）] %% 增加认证与授权
+        PS_Auth[认证与授权（Authentication & Authorization）] 
+        %% 增加认证与授权
     end
 
     subgraph Model_Layer[AI模型层（AI Model Layer）]
@@ -93,8 +94,10 @@ graph TD
         ML_Foundation[通用基础大模型（Foundation LLMs/VLMs）<br/>（自研/合作/开源）]
         ML_Finetuned[企业客户场景微调模型（Scene Fine-tuned Models）]
         ML_Custom[用户定制模型（User-Customized Models）]
-        ML_Training[模型训练服务（Model Training Service）] %% 增加训练服务
-        ML_Inference[模型推理服务（Model Inference Service）] %% 增加推理服务
+        ML_Training[模型训练服务（Model Training Service）] 
+        %% 增加训练服务
+        ML_Inference[模型推理服务（Model Inference Service）] 
+        %% 增加推理服务
     end
 
     subgraph Infra_Layer[基础设施层（Infrastructure Layer）]
@@ -113,7 +116,8 @@ graph TD
     PS_Orchestration --> ML_Training
     PS_DataMgmt -.-> ML_Training
     PS_DataMgmt -.-> ML_Inference
-    PS_Knowledge -.-> ML_Inference %% RAG需要查询知识库
+    PS_Knowledge -.-> ML_Inference 
+    %% RAG需要查询知识库
     PS_Monitoring -.-> Infra_LogMon
 
     ML_Foundation --> ML_Inference
@@ -469,7 +473,8 @@ graph TD
     SVC_APP --> SVC_WORKFLOW
     SVC_MONITOR --> EXT_PROMETHEUS
     SVC_MONITOR --> EXT_ELK
-    SVC_MONITOR --> SVC_DATA %% 审计日志可能存放在数据服务
+    SVC_MONITOR --> SVC_DATA 
+    %% 审计日志可能存放在数据服务
 
     classDef default fill:#f9f9f9,stroke:#333,stroke-width:1.5px;
     classDef interface fill:#FFF0F0,stroke:#EF3A3A;
