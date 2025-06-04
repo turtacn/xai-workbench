@@ -637,7 +637,7 @@ xai-workbench/
 └── README-zh.md
 ```
 
-## 参考
+## 6. 参考
 1. **低代码/无代码 AI 平台**
 
    * [Kubeflow Pipelines](https://github.com/kubeflow/pipelines)：用于编排机器学习工作流的低代码平台，支持可视化 DAG 编辑与调度。
