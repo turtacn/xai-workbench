@@ -399,7 +399,7 @@ Training
 我们将定义清晰的服务接口（Go Interface），以实现业务逻辑与底层实现的分离。
 
 ```mermaid
-graph TD
+graph LR
     %% 核心接口（Core Interfaces）
     subgraph S_CORE[核心接口（Core Interfaces）]
         direction LR
